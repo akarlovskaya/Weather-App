@@ -9,10 +9,14 @@ class Weather {
     // fetch weather from API
     async getWeather() {
         const apiCall = `${this.endPoint}${this.city},${this.country}&units=metric&APPID=${this.apiKey}`;
-
         let response = await fetch(apiCall);
         let weatherJson = await response.json();
+        
         return weatherJson;
     }
 
+    changeLocation(city, country) {
+        this.city = city;
+        this.country = country;
+    }
 }

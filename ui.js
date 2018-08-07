@@ -22,3 +22,11 @@ class UI {
         this.windDegEl.textContent = ` Wind degree: ${weatherData.wind.deg}`;
     }
 }
+
+function closeModal() {
+    const modal = document.querySelector('.modal');
+    const modalBackdrop = document.querySelector('.modal-backdrop');
+
+    modal.classList.remove('show');
+    modalBackdrop.classList.remove('show');
+}
